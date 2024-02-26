@@ -1,7 +1,7 @@
 version: '3'
 services:
   moin:
-    image: alexbh/moin:1.9.11-jessie
+    image: alexbh/moin:1.9.11-stretch
     ports:
       - "8080:8080"
       - "3031:3031"
