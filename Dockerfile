@@ -7,6 +7,8 @@ FROM python:2.7-buster
 
 ENV MOINMOIN_VERSION 1.9.11
 
+RUN apt update &&  apt -y upgrade
+
 # Add user and group for MoinMoin
 RUN groupadd -r moin && useradd -r -g moin moin
 
