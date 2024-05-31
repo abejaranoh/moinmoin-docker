@@ -1,4 +1,9 @@
-FROM python:2.7-jessie
+#debian 10
+FROM python:2.7-buster
+#debian 9
+#FROM python:2.7-stretch 
+#debian 8
+#FROM python:2.7-jessie 
 
 ENV MOINMOIN_VERSION 1.9.11
 
