@@ -16,6 +16,7 @@ jobs:
     steps:
     - name: Print hello
       run: echo "Hola Actions"
-    - uses: actions/checkout@v3
+    - name: Code Checkout
+      uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build --file Dockerfile -t alexbh/moin:1.9.11-buster-updated .
