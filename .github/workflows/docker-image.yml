@@ -26,4 +26,6 @@ jobs:
       uses: actions/checkout@v4
     - name: reads python version
       run: python -V
+    - name: reads moin version
+      run: moin --version
 
