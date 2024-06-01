@@ -9,7 +9,10 @@ on:
 
 jobs:
 
-  build:
+#  build:
+#    - name: Build the Docker image
+#      run: docker build --file Dockerfile -t alexbh/moin:1.9.11-buster-updated .
+  test:
     runs-on: ubuntu-latest
     steps:
     - name: Print hello
@@ -17,18 +20,11 @@ jobs:
     - name: Code Checkout
       uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build --file Dockerfile -t alexbh/moin:1.9.11-buster-updated .
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Code Checkout
-      uses: actions/checkout@v4
-    - name: Build the Docker image
       run: |
-        docker run -it alexbh/moin:1.9.11-buster-updated bash
+        echo Hola
         python -V
         cat /etc/os-release
+    #        docker run -it alexbh/moin:1.9.11-buster-updated bash
         
     - name: reads python version
       run: python -V
