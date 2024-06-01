@@ -24,6 +24,8 @@ jobs:
     steps:
     - name: Code Checkout
       uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker build --file Dockerfile -t alexbh/moin:1.9.11-buster-updated .
     - name: reads python version
       run: python -V
     - name: reads moin version
