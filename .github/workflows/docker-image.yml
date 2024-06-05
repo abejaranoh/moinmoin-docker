@@ -10,7 +10,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-22.04
-    container: alexbh/moin:1.9.11-buster
+    container:
+      image: alexbh/moin:1.9.11-buster
     steps:
     - name: Print hello
       run: echo "Hola Actions"
