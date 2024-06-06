@@ -14,7 +14,7 @@ jobs:
     - name: Print hello
       run: echo "Hola Actions"
     - name: variable
-      run: "${{ toJSON(github) }}"
+      run: echo "${{ toJSON(github) }}"
   test:
     needs: build
     runs-on: ubuntu-22.04
