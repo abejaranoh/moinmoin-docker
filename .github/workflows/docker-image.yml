@@ -9,15 +9,15 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
     - name: Print hello
       run: echo "Hola Actions"
     - name: variable
       run: echo "${{ toJSON(github) }}"
-  test:
-    needs: build
+  build:
+    needs: test
     runs-on: ubuntu-22.04
     container:
       image: alexbh/moin:1.9.11-buster
@@ -31,6 +31,11 @@ jobs:
         cat /etc/os-release
         python -V
         moin --version
+    - name: Upload artifact
+    - uses: actions/upload-artifact@v3
+      with:
+        name: contenedores
+        path: cont
 
 
 
