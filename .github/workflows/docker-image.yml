@@ -31,11 +31,7 @@ jobs:
         cat /etc/os-release
         python -V
         moin --version
-    - name: Upload artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: contenedores
-        path: dist
+
 
 
 
